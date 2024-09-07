@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Form Modal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <div class="logo">
+      <img src="bp7ay.png" alt="">
+    </div>
+    <div class="img">
+      <img src="image.svg" alt="">
+    </div>
+    <!-- Dropdown Trigger Button -->
+    <div class="dropdown main main" id="dpd">
+      <button class="btn " onClick="toggleDropdown('dpd')">Select Payment Method <i
+          class="fa-solid fa-angle-down"></i></button>
+      <ul class="dropdown-menu parent">
+        <li><a href="#" onclick="showFormInModal('form1')">WiFi Payment</a></li>
+        <li><a href="#" onclick="showFormInModal('form2')">Residential Internet</a></li>
+        <li><a href="#" onclick="showFormInModal('form3')">Corporate Internet</a></li>
+        <li><a href="#" onclick="showFormInModal('form4')">Email Payment</a></li>
+        <li><a href="#" onclick="showFormInModal('form5')">SMS Services</a></li>
+        <li><a href="#" onclick="showFormInModal('form6')">Domain/Hosting Payment</a></li>
+        <li><a href="#" onclick="showFormInModal('form7')">Telephone</a></li>
+        <li><a href="#" onclick="showFormInModal('form8')">Others</a></li>
+        <!-- Add more items as needed -->
+      </ul>
+    </div>
+
+    <h3>
+      Secure Payment!
+    </h3>
+    <div class="text">
+      <p><b>BPAY makes it easy for you to pay!</b><br>
+        Pay Bills Online From Your Credit or Debit Card.</p>
+      </div>
+      <div class="note">
+        <p><small>NOTE: </small>Keep your JazzCash phone set with you & preferably close all applications on it. The payment system will send a request on your phone to enter your JazzCash PIN number. The request will be sent on your phone from BRAIN TELECOMMUNICATIONS. Enter your JazzCash PIN to proceed with the payment.</p>
+      </div>
+      <footer class="footer">
+        <strong> ©</strong> 2024 <strong><a href="https://brain.pk"
+            style="color: #ec1c4f; text-decoration:none;">Brain.pk</a></strong> All Rights Reserved. <br>
+        <small>Designed & Developed by <strong><a href="https://www.brain.net.pk/"
+              style="color: #ec1c4f; text-decoration:none;">BrainSoft</a></strong></small>
+      </footer>
+
+      <!-- Modal Structure -->
+      <div class="modal one" id="paymentModal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <div id="modal-body-content">
+            <!-- Form content will be injected here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Forms -->
+      <div id="form1" style="display: none;">
+        <h2>WiFi Payment</h2>
+        <form action="#" class="wifi">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+          <div class="main1">
+            <div class="dropdown">
+              <button class="btn-main" id="childDropdown">
+                <a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '100(10GB)')"><i
+                    class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;100 (10GB)</a>
+              </button>
+              <ul class="dropdown-menu  menu child" aria-labelledby="childDropdown" id="form-select-child">
+                <li><a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '100(10GB)')"><i
+                      class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;100 (10GB)</a></li>
+                <li><a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '200(20GB)')"><i
+                      class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;200 (20GB)</a></li>
+                <li><a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '300(30GB)')"><i
+                      class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;300 (30GB)</a></li>
+                <li><a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '500(50GB)')"><i
+                      class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;500 (50GB)</a></li>
+                <li><a class="dropdown-item1" href="#" onclick="updateDropdown('childDropdown', '1000(100GB)')"> <i
+                      class="fa-solid fa-rupee-sign"></i> &nbsp;&nbsp;&nbsp;1000 (100GB)</a></li>
+                <!-- Add more options as needed -->
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <div id="form2" style="display: none;">
+        <h2>Residential Internet</h2>
+        <form action="#" class="Residential">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="text" placeholder="Amount" readonly />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="form3" style="display: none;">
+        <h2>Corporate Internet</h2>
+        <form action="#" class="corporate">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="text" placeholder="Amount" readonly />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="form4" style="display: none;">
+        <h2>Email Payment</h2>
+        <form action="#" class="email">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="tel" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="number" id="amount" class="amount-input" placeholder="Amount in Rs" min="0" required />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+        </form>
+      </div>
+
+      <div id="form5" style="display: none;">
+        <h2>SMS Services Payment</h2>
+        <form action="#" class="sms">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="name" placeholder="Full Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Valid Email Address" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="number" id="amount" class="amount-input" placeholder="Amount in Rs" min="0" required />
+          </div>
+
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="form6" style="display: none;">
+        <h2>Domain/Hosting Payment</h2>
+        <form action="#" class="domain">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="name" placeholder="Full Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Valid Email Address" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="number" id="amount" class="amount-input" placeholder="Amount in Rs" min="0" required />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <div id="form7" style="display: none;">
+        <h2>Telephone </h2>
+        <form action="#" class="domain">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="name" placeholder="Full Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Valid Email Address" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="number" id="amount" class="amount-input" placeholder="Amount in Rs" min="0" required />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+
+
+      <div id="form8" style="display: none;">
+        <h2>Other</h2>
+        <form action="#" class="domain">
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="name" placeholder="Full Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Account Number" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Valid Email Address" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Provide Reference details" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-rupee-sign"></i>
+            <input type="number" id="amount" class="amount-input" placeholder="Amount in Rs" min="0" required />
+          </div>
+          <br>
+          <div class="button">
+            <a href="#">
+              <input type="submit" class="main-btn" value="JazzCash">
+            </a>
+            <a href="#">
+              <input type="submit" class="main-btn1" value="Credit Card">
+            </a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
